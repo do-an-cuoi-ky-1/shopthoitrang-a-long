@@ -1,80 +1,120 @@
-/* Reset mặc định */
-body, h1, h2, p, form, input, button {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Cấu trúc cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Toàn bộ trang */
-body {
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
-}
-
-/* Header */
+/* Header styles */
 header {
-    background-color: black;
-    text-align: center;
-    padding: 20px;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  height: 150px; /* Kéo dài header */
 }
 
-header h1 {
-    font-size: 2em;
-    font-weight: bold;
+/* Logo */
+.logo {
+  width: 100px; /* Chiều rộng của logo vuông */
+  height: 100px; /* Chiều cao của logo vuông */
+  margin-right: 20px; /* Khoảng cách giữa logo và tên shop */
+  border-radius: 20px; /* Bo góc logo */
 }
 
-/* Main form */
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 80px);
+/* Tên cửa hàng */
+h1 {
+  margin: 0;
+  font-size: 36px; /* Tăng kích cỡ chữ tên shop */
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  flex: 1; /* Cho phép tên shop chiếm không gian còn lại */
+}
+
+/* Các phần còn lại giữ nguyên */
+.container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  justify-content: space-between;
 }
 
 .form-container {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
+  flex: 1;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .form-container h2 {
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 
-label {
-    display: block;
-    margin: 10px 0 5px;
-    text-align: left;
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
-input {
-    width: 100%;
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 10px;
+.form-container input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #555;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #777;
+  background-color: #0056b3;
 }
 
-/* Kết quả */
-#result {
-    margin-top: 20px;
-    font-weight: bold;
-    color: #0f0;
+/* Right column for size charts */
+.chart-container {
+  flex: 1;
+}
+
+.chart-container h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.chart-container table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+.chart-container table, th, td {
+  border: 1px solid #ddd;
+}
+
+.chart-container th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+.chart-container th {
+  background-color: #007bff;
+  color: white;
+}
+
+.chart-container td {
+  background-color: #f9f9f9;
 }
